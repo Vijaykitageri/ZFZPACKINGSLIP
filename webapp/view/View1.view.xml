@@ -1,0 +1,209 @@
+<mvc:View
+    controllerName="zfzpackingslip.controller.View1"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:t="sap.ui.table"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.f">
+    <f:DynamicPage showFooter="false" fitContent="false"  >
+        <!-- HEADER -->
+        <!-- <f:title>
+            <f:DynamicPageTitle>
+                <f:heading>
+                    <Title text="PACKING SLIP" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title> -->
+        <f:header>
+         <f:DynamicPageHeader  pinnable="true">
+            <l:VerticalLayout width="100%" class="sapUiSmallMargin">
+                <!-- ==========================
+                     TOP AREA (2 Columns)
+                =============================-->
+                <HBox width="100%" justifyContent="SpaceBetween">
+                    <!-- LEFT ALL FIELDS -->
+                    <VBox width="70%">
+                        <!-- Row 1 -->
+                        <HBox  alignItems="Center">
+                            <Label text="Order" width="120px" class="sapUiTinyMargin" tooltip="Order"/>
+                            <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <HBox  alignItems="Center">
+                            <Label text="Order Date" width="120px" class="sapUiTinyMargin" tooltip="Order Date"/>
+                            <DateRangeSelection id="Date" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd" tooltip="DatePicker" width="11rem" value="" />
+                        </HBox>
+                        <!-- Row 2 -->
+                        <HBox >
+                                <Label text="S.O No" width="120px" class="sapUiTinyMargin" tooltip="S.O No"/>
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <HBox >
+                                <Label text="Sales Order Item" width="120px" class="sapUiTinyMargin" tooltip="Sales Order Item"/>
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <!-- Row 3 -->
+                        <HBox >
+                                <Label text="Batch" width="120px" class="sapUiTinyMargin" tooltip="Batch"/>
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <HBox >
+                                <Label text="Customer Name" width="120px" class="sapUiTinyMargin" tooltip="Customer Name"/>
+                                <Input width="300px" value="" maxLength=""/>
+                        </HBox>
+                        <!-- Row 4 -->
+                        <HBox >
+                                <Label text="Plant" width="120px" class="sapUiTinyMargin" tooltip="Plant" />
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <HBox >
+                                <Label text="Size" width="120px" class="sapUiTinyMargin" tooltip="Size"/>
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <!-- Row 5 -->
+                        <HBox >
+                                <Label text="User Login" width="120px" class="sapUiTinyMargin" tooltip="User Login"/>
+                                <Input width="300px" value="" maxLength=""/>
+                        </HBox>
+                    </VBox>
+                        <!-- ==========================
+                             EXTRA FIELDS SECTION
+                        =============================-->
+                    <VBox width="25%">    <!-- Row 6 -->
+                        <HBox>
+                                <Label text="Invoice No" width="120px" class="sapUiTinyMargin" tooltip="Invoice No"/>
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <HBox>
+                                <Label text="Invoice Dt" width="120px" class="sapUiTinyMargin" tooltip="Invoice Dt"/>
+                                <DateRangeSelection id="IDate" valueFormat="yyyy-MM-dd" displayFormat="yyyy-MM-dd" tooltip="DatePicker" width="10rem" value="" />
+                        </HBox>
+                        <HBox>
+                                <Label text="Number of Boxes" width="120px" class="sapUiTinyMargin" tooltip="Number of Boxes"/>
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <HBox>
+                                <Label text="Qunatity" width="120px" class="sapUiTinyMargin" tooltip="Qunatity"/>
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <HBox>
+                                <Label text="Base Unit" width="120px" class="sapUiTinyMargin" tooltip="Base Unit"/>
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <HBox>
+                                <Label text="Total Box" width="120px" class="sapUiTinyMargin" tooltip="Total Box"/>
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <HBox>
+                                <Label text="Box Type" width="120px" class="sapUiTinyMargin" tooltip="Box Type"/>
+                                <Input width="200px" value="" maxLength=""/>
+                        </HBox>
+                        <HBox>
+                                <Label text="Remarks" width="120px" class="sapUiTinyMargin" tooltip="Remarks"/>
+                                <Input width="350px" value="" maxLength=""/>
+                        </HBox>
+                    </VBox>
+                    <!-- RIGHT BUTTONS -->
+                    <VBox width="25%" alignItems="Center" class="borderedVBox actionVBox">
+                        <Button text="DISPLAY" width="120px" class="sapUiTinyMargin"/>
+                        <Button text="SAVE" width="120px" type="Accept" class="sapUiTinyMargin"/>
+                        <Button text="CLEAR" width="120px" type="Reject" class="sapUiTinyMargin"/>
+                        <Button text="EXIT"  width="120px" class="sapUiTinyMargin"/>
+                    </VBox>
+                </HBox>
+                <!-- ==========================
+                     CAP + BODY DETAILS
+                =============================-->
+                <HBox width="100%" justifyContent="SpaceBetween">
+                    <!-- CAP -->
+                    <VBox width="33%" >
+                        <Panel headerText="CAP DETAILS">
+                            <l:VerticalLayout >
+
+                                <HBox >
+                                    <Label text="Cap Color Des" width="120px" tooltip="Cap Color Des"/>
+                                    <Input width="200px"/>
+                                </HBox>
+
+                                <HBox >
+                                    <Label text="Cap Color Code" width="120px" tooltip="Cap Color Code"/>
+                                    <Input width="200px"/>
+                                </HBox>
+
+                                <HBox >
+                                    <Label text="Cap Print Message" width="120px" tooltip="Cap Print Message"/>
+                                    <Input width="200px"/>
+                                </HBox>
+
+                                <HBox >
+                                    <Label text="Cap Printing Link" width="120px" tooltip="Cap Printing Link"/>
+                                    <Input width="200px"/>
+                                </HBox>
+
+                            </l:VerticalLayout>
+                        </Panel>
+                    </VBox>
+                    <!-- BODY -->
+                    <VBox width="33%">
+                        <Panel headerText="BODY DETAILS">
+                            <l:VerticalLayout >
+                                <HBox>
+                                    <Label text="Body Color Des" width="120px" class="sapUiTinyMargin" tooltip="Body Color Des"/>
+                                    <Input width="200px" value="" maxLength=""/>
+                                </HBox>
+                                <HBox >
+                                    <Label text="Body Color Code" width="120px" class="sapUiTinyMargin" tooltip="Body Color Code"/>
+                                    <Input width="200px" value="" maxLength=""/>
+                                </HBox>
+                                <HBox >
+                                    <Label text="Body Printing Message" width="120px" class="sapUiTinyMargin" tooltip="Body Printing Message"/>
+                                    <Input width="200px" value="" maxLength=""/>
+                                </HBox>
+                                <HBox>
+                                    <Label text="Body Printing Ink" width="120px" class="sapUiTinyMargin" tooltip="Body Printing Ink"/>
+                                    <Input width="200px" value="" maxLength=""/>
+                                </HBox>
+                            </l:VerticalLayout>
+                        </Panel>
+                    </VBox>
+                    <VBox width="20%" class="borderedVBox2">
+                         <l:VerticalLayout>
+                            <HBox class="sapUiLargeMarginTop">
+                                <Label text="Serial No" width="100px" class="sapUiTinyMargin" tooltip="Serial No"></Label>
+                                <Input width="120px" value="" maxLength=""/>
+                            </HBox>
+                            <HBox justifyContent="Center" class="sapUiTinyMargin">
+                                <Button text="Print" type="Accept" width="120px"></Button>
+                            </HBox>
+                        </l:VerticalLayout>
+                    </VBox>
+                </HBox>
+            </l:VerticalLayout>
+         </f:DynamicPageHeader>
+        </f:header>
+            <f:content>
+                <!-- ==========================
+                     BOTTOM TABLE
+                =============================-->
+                <t:Table rows="{model>/Items}" >
+                    <t:columns>
+
+                        <t:Column label="Mandt">
+                            <t:template>
+                                <Text text="{model>Mandt}"/>
+                            </t:template>
+                        </t:Column>
+
+                        <t:Column label="Sl No"><t:template><Text text="{model>SlNo}"/></t:template></t:Column>
+                        <t:Column label="Process Order No"><t:template><Text text="{model>ProcessOrder}"/></t:template></t:Column>
+                        <t:Column label="Created Date"><t:template><Text text="{model>CreatedDate}"/></t:template></t:Column>
+                        <t:Column label="S.O No"><t:template><Text text="{model>SONo}"/></t:template></t:Column>
+                        <t:Column label="Item"><t:template><Text text="{model>Item}"/></t:template></t:Column>
+                        <t:Column label="Batch No"><t:template><Text text="{model>BatchNo}"/></t:template></t:Column>
+                        <t:Column label="Inv No"><t:template><Text text="{model>InvNo}"/></t:template></t:Column>
+                        <t:Column label="Inv Dt"><t:template><Text text="{model>InvDt}"/></t:template></t:Column>
+                        <t:Column label="Customer Name"><t:template><Text text="{model>CustomerName}"/></t:template></t:Column>
+                    </t:columns>
+                </t:Table>
+            </f:content>
+    </f:DynamicPage>
+</mvc:View>
